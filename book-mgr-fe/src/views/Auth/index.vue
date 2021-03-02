@@ -8,14 +8,16 @@
             <a-tabs>
     <a-tab-pane key="1" tab="登录">
         <div class="item">
-            <a-input placeholder="请输入用户名">
+            <a-input placeholder="请输入用户名"
+            v-model:value="loginForm.account">
                   <template v-slot:prefix>
                  <UserOutlined />
                 </template>
             </a-input>
         </div>
          <div class="item">
-            <a-input placeholder="请输入密码">
+            <a-input placeholder="请输入密码"
+            v-model:value="loginForm.password">
                 <template v-slot:prefix>
                  <LockOutlined />
                 </template>
@@ -25,7 +27,7 @@
             <a href="">忘记密码</a>
         </div>
         <div class="item">
-            <a-button type="primary">登录</a-button>
+            <a-button type="primary" @click="login">登录</a-button>
         </div>
     </a-tab-pane>
     <a-tab-pane key="2" tab="注册">
@@ -49,7 +51,8 @@
             </a-input>
         </div>
          <div class="item">
-            <a-input placeholder="请输入邀请码">
+            <a-input placeholder="请输入邀请码"
+            v-model:value="regForm.inviteCode">
                    <template v-slot:prefix>
                  <MailFilled />
                 </template>
