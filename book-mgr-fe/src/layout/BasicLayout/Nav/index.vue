@@ -1,5 +1,5 @@
 <template>
     <div>
-        NAV
+       NAM
     </div>
 </template>
