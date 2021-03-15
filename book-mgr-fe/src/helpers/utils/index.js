@@ -1,4 +1,5 @@
 import { message } from 'ant-design-vue';
+//成功之后进行提示
 export const result = (response, authShowErrorMsg = true) => {
     const { data } = response;
     if ((data.code === 0) && authShowErrorMsg) {
@@ -23,3 +24,21 @@ export const result = (response, authShowErrorMsg = true) => {
         },
     }
 }
+export const clone = (obj) => {
+    return JSON.parse(JSON.stringify(obj));
+};
+
+//格式化时间戳
+export const formatTimestamp = (ts) => {
+    const date = new Date(Number(ts));
+
+    const YYYY = date.getFullYear();
+    const MM = date.getMonth() + 1;
+    const DD = date.getDate();
+
+    const hh = date.getHours();
+    const mm = date.getMinutes();
+    const ss = date.getSeconds();
+
+    return `${YYYY}/${MM}/${DD} ${hh}:${mm}:${ss}`;
+};

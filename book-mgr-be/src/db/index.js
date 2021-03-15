@@ -1,5 +1,6 @@
 require('./Schemas/User');
 require('./Schemas/InviteCode'); //执行这一文件
+require('./Schemas/Book');
 const mongoose = require('mongoose');
 const connect = async() => {
     return new Promise((resolve) => {
